@@ -1,0 +1,20 @@
+<div class="container p-3">
+  <h3>Home component works</h3>
+
+  <a routerLink="profile" class="btn btn-sm btn-outline-secondary"
+    >Go To Profile Page</a
+  >
+
+  <hr />
+
+  <div>
+    <h4>Users</h4>
+    <ul>
+      @for (user of users; track $index) {
+      <li>
+        <a routerLink="user/{{ user.name }}">{{ user.name }} </a>
+      </li>
+      }
+    </ul>
+  </div>
+</div>

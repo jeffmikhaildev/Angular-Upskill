@@ -1,3 +1,34 @@
 import { Routes } from '@angular/router';
+import { DirectivesComponent } from './components/directives/directives.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { TodolistComponent } from './components/todolist/todolist.component';
+import { SignalsComponent } from './components/signals/signals.component';
+import { HomeComponent } from './components/home/home.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { UserComponent } from './components/user/user.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { FormsComponent } from './components/forms/forms.component';
+import { TdfComponent } from './components/tdf/tdf.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { PipesComponent } from './components/pipes/pipes.component';
+import { ApiComponent } from './components/api/api.component';
+import { JsonServerComponent } from './components/json-server/json-server.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  { path: 'directives', component: DirectivesComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'signals', component: SignalsComponent },
+  { path: 'todolist', component: TodolistComponent },
+  { path: '', component: HomeComponent },
+  { path: 'user/:name', component: UserComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'forms', component: FormsComponent },
+  { path: 'tdf', component: TdfComponent },
+  { path: 'parent', component: ParentComponent },
+  { path: 'pipes', component: PipesComponent },
+  { path: 'api', component: ApiComponent },
+  { path: 'json-server', component: JsonServerComponent },
+  { path: '**', component: PagenotfoundComponent },
+];

@@ -1,0 +1,20 @@
+<div class="p-1">
+  <h4 class="text-center fw-bold">API component</h4>
+
+  <div class="d-flex flex-wrap justify-content-center gap-5">
+    @for (product of productData; track $index) {
+    <div class="card shadow-lg bg-secondary text-white" style="width: 22rem">
+      <img src="{{ product.thumbnail }}" class="card-img-top" alt="{{ product.title }}" />
+      <div class="card-body">
+        <h5 class="card-title text-uppercase fw-bold">{{ product.title }}</h5>
+        <h6 class="text-dark">{{ product.category }}</h6>
+        <h6 class="text-warning">${{ product.price }}</h6>
+        <p class="card-text">
+          {{ product.description }}
+        </p>
+        <a href="#" class="btn btn-dark">Go somewhere</a>
+      </div>
+    </div>
+    }
+  </div>
+</div>

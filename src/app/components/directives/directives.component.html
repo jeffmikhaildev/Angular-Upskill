@@ -1,0 +1,87 @@
+<div class="container-fluid font-monospace">
+  <h3 class="text-center p-3 fw-bold text-uppercase">
+    Directives component works!
+  </h3>
+
+  <hr />
+
+  <div class="row">
+    <div class="col-4">
+      <h4 class="fw-bold">Structural Directive *ngFor</h4>
+
+      <div>
+        <ul>
+          <li *ngFor="let student of students">
+            {{ student }}
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <ul>
+          <li *ngFor="let student of studentData">
+            {{ student.name | uppercase }} - {{ student.age }} -
+            {{ student.email }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="vr p-0"></div>
+
+    <div class="col-3">
+      <h4 class="fw-bold">Structural Directive *ngIf</h4>
+
+      <div class="m-4">
+        <button (click)="toggleShow()">Toggle</button>
+        <span *ngIf="show" class="ms-3">This is a paragraph sample.</span>
+      </div>
+    </div>
+
+    <div class="vr p-0"></div>
+
+    <div class="col-4">
+      <h4 class="fw-bold">Structural Directive *ngSwitch</h4>
+
+      <div class="m-1" [ngSwitch]="color">
+        <h1 *ngSwitchCase="'red'" class="bg-danger text-white p-3">RED</h1>
+        <h1 *ngSwitchCase="'blue'" class="bg-primary text-white p-3">BLUE</h1>
+        <h1 *ngSwitchCase="'yellow'" class="bg-warning text-white p-3">
+          YELLOW
+        </h1>
+        <h1 *ngSwitchCase="'cyan'" class="bg-info text-white p-3">CYAN</h1>
+        <h1 *ngSwitchCase="'black'" class="bg-dark text-white p-3">BLACK</h1>
+        <h1 *ngSwitchCase="'green'" class="bg-success text-white p-3">GREEN</h1>
+        <h1 *ngSwitchCase="'gray'" class="bg-secondary text-white p-3">GRAY</h1>
+        <h1 *ngSwitchDefault class="bg-tranparent p-3 border">N/A</h1>
+      </div>
+
+      <div class="m-1 d-flex gap-1" [ngSwitch]="color">
+        <button (click)="changeColor('red')" class="btn btn-sm btn-danger">
+          RED
+        </button>
+        <button (click)="changeColor('blue')" class="btn btn-sm btn-primary">
+          BLUE
+        </button>
+        <button (click)="changeColor('yellow')" class="btn btn-sm btn-warning">
+          YELLOW
+        </button>
+        <button (click)="changeColor('cyan')" class="btn btn-sm btn-info">
+          CYAN
+        </button>
+        <button (click)="changeColor('black')" class="btn btn-sm btn-dark">
+          BLACK
+        </button>
+        <button (click)="changeColor('green')" class="btn btn-sm btn-success">
+          GREEN
+        </button>
+        <button (click)="changeColor('gray')" class="btn btn-sm btn-secondary">
+          GRAY
+        </button>
+        <button (click)="changeColor('')" class="btn btn-sm btn-secondary">
+          N/A
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

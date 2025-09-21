@@ -1,0 +1,26 @@
+<div class="container p-3">
+  <h3 class="fw-bold">Pipes component</h3>
+
+  <div class="">
+    <p>{{ title | uppercase }}</p>
+    <p>{{ title | titlecase }}</p>
+    <p>{{ title | lowercase }}</p>
+  </div>
+  <div>
+    <p>{{ today }}</p>
+    <p>{{ today | date }}</p>
+    <p>{{ today | date : "fullDate" }}</p>
+    <p>{{ today | date : "fullDate" | uppercase }}</p>
+    <p>{{ today | date : "hh:mm:ss" }}</p>
+  </div>
+  <div>
+    <p>{{ amount | currency }}</p>
+    <p>{{ amount | currency : "EUR" }}</p>
+    <p>{{ amount | currency : "PHP" }}</p>
+  </div>
+
+  <div>
+    <h4>CUSTOM PIPE</h4>
+    <p>{{ amount | currencyConverter }}</p>
+  </div>
+</div>
